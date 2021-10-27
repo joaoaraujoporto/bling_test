@@ -48,17 +48,11 @@ function extract_odds($array) {
 function sort_even_crescent_odd_decrescent($array) {
     $evens = extract_evens($array);
     $odds = extract_odds($array);
-    quicksort($evens);
-    quicksort_decrescent($odds);
-    // $sorted_evens = quicksort($evens);
-    // print_r($sorted_evens);exit();
-    // $sorted_odds = quicksort($odds);
-    // $sorted_even_crescent_odd_decrescent = array_merge($sorted_evens, $sorted_odds);
-    $sorted_even_crescent_odd_decrescent = array_merge($evens, $odds);
+    $sorted_evens = quicksort($evens);
+    $sorted_odds = quicksort_decrescent($odds);
+    $sorted_even_crescent_odd_decrescent = array_merge($sorted_evens, $sorted_odds);
     return $sorted_even_crescent_odd_decrescent;
 }
-
-
 
 // print_r(rotate_to_right([1,2,3,4,5,6], 2));
 print_r(sort_even_crescent_odd_decrescent([6,5,4,3,2,1]));
