@@ -1,0 +1,48 @@
+version: '3.8'
+services:
+  bling-app:
+    image: bling-app
+    build:
+      context: ./dockerfiles
+      dockerfile: Dockerfile-app
+    container_name: bling-app
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - 80:80
+    restart: always
+    env_file:
+      - .env
+    networks:
+      bling-net:
+        ipv4_address: 172.20.0.2
+    depends_on:
+      - "bling-db"
+  bling-db:
+    image: mysql:5.6.44
+    container_name: bling-db
+    volumes:
+      - bling-data:/var/lib/mysql
+    ports:
+      - ${MYSQL_HOST_PORT}:${MYSQL_HOST_PORT}
+    env_file:
+      - .env
+    networks:
+      bling-net:
+        ipv4_address: 172.20.0.3
+        aliases:
+          - ${MYSQL_HOST}
+    restart: always
+
+volumes:
+  bling-data:
+
+networks:
+  bling-net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.20.0.0/16
+        gateway: 172.20.0.1

@@ -1,0 +1,6 @@
+# Base image
+FROM mysql:5.6.44
+
+# Create web folder
+RUN mysqldump -h $MYSQL_HOST_HOMOLOG -P $MYSQL_HOST_PORT -u $MYSQL_USERNAME \
+    -p'$MYSQL_PASSWORD' $MYSQL_DATABASE > data.sql
