@@ -55,8 +55,47 @@ function sort_even_crescent_odd_decrescent($array) {
     return $sorted_even_crescent_odd_decrescent;
 }
 
+
+function combine2($array) {
+    $combinations = [];
+    $array_last_index = sizeof($array) - 1;
+
+    for ($i = 0; $i < $array_last_index; $i++) {
+        for ($j = $i + 1; $j <= $array_last_index; $j++) {
+            $combinations[] = [$array[$i], $array[$j]];
+        }
+    }
+
+    return $combinations;
+}
+
+function combine($array, $p) {
+    if ($p === 2) {
+        return combine2($array);
+    }
+
+    $combinations = [];
+    $array_last_index = sizeof($array) - 1;
+
+    for ($i = 0; $i <= (sizeof($array) - $p); $i++) {
+        $array2 = array_slice($array, $i+1, $array_last_index);
+        $subcombs = combine($array2, $p-1);
+
+        foreach ($subcombs as $subcomb) {
+            array_unshift($subcomb, $array[$i]);
+            $combinations[] = $subcomb;
+        }
+    }
+
+    return $combinations;
+}
+
+
+
 // print_r(rotate_to_right([1,2,3,4,5,6], 2));
 // print_r(sort_even_crescent_odd_decrescent([6,5,4,3,2,1]));
-print_r(Date::calc_date_diff_in_days("03/04/1998", "27/10/2021"));
+// print_r(Date::calc_date_diff_in_days("03/04/1998", "27/10/2021"));
 // print_r(Date::calc_date_diff_in_days("03/04/1998", "27/10/1998"));
 // print_r(Date::calc_date_diff_in_days("27/10/2021", "03/04/1998"));
+// print_r(combine2([1,2,3,4,5,6]));
+print_r(combine([1,2,3,4,5,6], 3));
