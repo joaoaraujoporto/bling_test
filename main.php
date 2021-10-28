@@ -55,7 +55,6 @@ function sort_even_crescent_odd_decrescent($array) {
     return $sorted_even_crescent_odd_decrescent;
 }
 
-
 function combine2($array) {
     $combinations = [];
     $array_last_index = sizeof($array) - 1;
@@ -115,7 +114,28 @@ function get_triangles($array) {
     return $triangles;
 }
 
+function contains($string, $substring) {
+    $string = str_split($string);
+    $substring = str_split($substring);
 
+    for ($i = 0; $i < sizeof($string); $i++) {
+        if ((sizeof($string) - $i) < sizeof($substring)) {
+            break;
+        }
+        
+        for ($j = 0; $j < sizeof($substring); $j++) {
+            if ($substring[$j] !== $string[$i + $j]) {
+                break;
+            }
+        }
+
+        if ($j === sizeof($substring)) {
+            return true;
+        }
+    }
+
+    return false;
+}
 
 // print_r(rotate_to_right([1,2,3,4,5,6], 2));
 // print_r(sort_even_crescent_odd_decrescent([6,5,4,3,2,1]));
@@ -125,4 +145,9 @@ function get_triangles($array) {
 // print_r(combine2([1,2,3,4,5,6]));
 // print_r(combine([1,2,3,4,5,6], 3));
 // print_r(get_triangles([1,2,3,4]));
-print_r(get_triangles([1,2,3,4,5,6]));
+// print_r(get_triangles([1,2,3,4,5,6]));
+// print_r(contains("amarelo", "amak"));
+// print_r(contains("amarelo", "amar"));
+// print_r(contains("amarelo", "amaro"));
+// print_r(contains("amarelo", "o"));
+print_r(contains("amarelo", "b"));
