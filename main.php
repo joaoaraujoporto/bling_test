@@ -90,6 +90,31 @@ function combine($array, $p) {
     return $combinations;
 }
 
+function get_min_value($array) {
+    $array = quicksort($array);
+    $min_value = $array[0];
+    return $min_value;
+}
+
+function get_triangles($array) {
+    $triangles = [];
+    if (sizeof($array) < 3) {
+        return $triangles;
+    }
+
+    $combinations = combine($array, 3);
+    foreach($combinations as $combination) {
+        $sorted_comb = quicksort($combination);
+        $comb_is_triangle = $sorted_comb[0] + $sorted_comb[1] > $sorted_comb[2];
+
+        if ($comb_is_triangle) {
+            $triangles[] = $combination;
+        }
+    }
+
+    return $triangles;
+}
+
 
 
 // print_r(rotate_to_right([1,2,3,4,5,6], 2));
@@ -98,4 +123,6 @@ function combine($array, $p) {
 // print_r(Date::calc_date_diff_in_days("03/04/1998", "27/10/1998"));
 // print_r(Date::calc_date_diff_in_days("27/10/2021", "03/04/1998"));
 // print_r(combine2([1,2,3,4,5,6]));
-print_r(combine([1,2,3,4,5,6], 3));
+// print_r(combine([1,2,3,4,5,6], 3));
+// print_r(get_triangles([1,2,3,4]));
+print_r(get_triangles([1,2,3,4,5,6]));
