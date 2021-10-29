@@ -2,7 +2,8 @@
 
 require_once("./quicksort.php");
 require_once("./quicksort_decrescent.php");
-require_once("Date.php");
+require_once("./geo.php");
+require_once("./functions.php");
 
 /**
  * Rotates a array to right based on a given offset.
@@ -89,12 +90,6 @@ function combine($array, $p) {
     return $combinations;
 }
 
-function get_min_value($array) {
-    $array = quicksort($array);
-    $min_value = $array[0];
-    return $min_value;
-}
-
 function get_triangles($array) {
     $triangles = [];
     if (sizeof($array) < 3) {
@@ -150,4 +145,13 @@ function contains($string, $substring) {
 // print_r(contains("amarelo", "amar"));
 // print_r(contains("amarelo", "amaro"));
 // print_r(contains("amarelo", "o"));
-print_r(contains("amarelo", "b"));
+// print_r(contains("amarelo", "b"));
+// $rectangle_1 = new Rectangle(new Point(1,1), new Point(3,3));
+// $rectangle_2 = new Rectangle(new Point(2,2), new Point(4,4));
+// print_r($rectangle_1->get_overlap_area($rectangle_2));
+// $rectangle_1 = new Rectangle(new Point(5,1), new Point(7,3));
+// $rectangle_2 = new Rectangle(new Point(6,-1), new Point(8,2));
+// print_r($rectangle_1->get_overlap_area($rectangle_2));
+$rectangle_1 = new Rectangle(new Point(5,1), new Point(7,3));
+$rectangle_2 = new Rectangle(new Point(6,-1), new Point(8,2));
+print_r($rectangle_1->get_overlap_area($rectangle_2));

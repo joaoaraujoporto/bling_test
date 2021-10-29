@@ -33,7 +33,7 @@ function partition_decrescent($A, $p, $r) {
         	$i = $i+1;
        	} while ($A[$i] > $x);
        	
-       	if ($i > $j) {
+       	if ($i < $j) {
             $A = exchange($A, $i, $j);
         } else {
             return [$A, $j];
