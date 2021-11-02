@@ -86,8 +86,7 @@ class Graph {
         $original_start_vertice,
         $irrelevant_neighbor = null) {
         $paths = [];
-            
-
+        
         foreach ($start_vertice->neighbors as $start_vertice_neighbor) {
             if ($start_vertice_neighbor->id === $original_start_vertice->id) {
                 continue;

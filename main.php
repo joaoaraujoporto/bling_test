@@ -5,6 +5,7 @@ require_once("./quicksort_decrescent.php");
 require_once("./geo.php");
 require_once("./functions.php");
 require_once("./graph.php");
+require_once("./component.php");
 
 /**
  * Rotates a array to right based on a given offset.
@@ -160,32 +161,51 @@ function contains($string, $substring) {
 // print_r($rectangle_1->get_overlap_area($rectangle_2));
 
 
-$graph = new Graph();
-$vertice_a = $graph->add_vertice("a");
-$vertice_b = $graph->add_vertice("b");
-$vertice_c = $graph->add_vertice("c");
-$vertice_d = $graph->add_vertice("d");
-$vertice_e = $graph->add_vertice("e");
-$vertice_f = $graph->add_vertice("f");
-$vertice_g = $graph->add_vertice("g");
-$vertice_h = $graph->add_vertice("h");
-$graph->add_link($vertice_a, $vertice_b);
-$graph->add_link($vertice_a, $vertice_e);
-$graph->add_link($vertice_a, $vertice_h);
-$graph->add_link($vertice_b, $vertice_c);
-$graph->add_link($vertice_b, $vertice_d);
-$graph->add_link($vertice_c, $vertice_d);
-$graph->add_link($vertice_c, $vertice_e);
-$graph->add_link($vertice_d, $vertice_g);
-$graph->add_link($vertice_e, $vertice_f);
-$graph->add_link($vertice_g, $vertice_h);
-$paths = $graph->get_paths_between_vertices($vertice_a, $vertice_c);
-$paths = array_map(function($path) {
-        $path = array_map(function($vertice) {
-            return $vertice->value;
-        }, $path);
-    return $path;
-}, $paths);
-print_r($paths);
+// $graph = new Graph();
+// $vertice_a = $graph->add_vertice("a");
+// $vertice_b = $graph->add_vertice("b");
+// $vertice_c = $graph->add_vertice("c");
+// $vertice_d = $graph->add_vertice("d");
+// $vertice_e = $graph->add_vertice("e");
+// $vertice_f = $graph->add_vertice("f");
+// $vertice_g = $graph->add_vertice("g");
+// $vertice_h = $graph->add_vertice("h");
+// $graph->add_link($vertice_a, $vertice_b);
+// $graph->add_link($vertice_a, $vertice_e);
+// $graph->add_link($vertice_a, $vertice_h);
+// $graph->add_link($vertice_b, $vertice_c);
+// $graph->add_link($vertice_b, $vertice_d);
+// $graph->add_link($vertice_c, $vertice_d);
+// $graph->add_link($vertice_c, $vertice_e);
+// $graph->add_link($vertice_d, $vertice_g);
+// $graph->add_link($vertice_e, $vertice_f);
+// $graph->add_link($vertice_g, $vertice_h);
+// $paths = $graph->get_paths_between_vertices($vertice_a, $vertice_c);
+// $paths = array_map(function($path) {
+//         $path = array_map(function($vertice) {
+//             return $vertice->value;
+//         }, $path);
+//     return $path;
+// }, $paths);
+// print_r($paths);
 
 
+$element_1 = new Element(1);
+$element_2 = new Element(2);
+$element_3 = new Element(3);
+$element_4 = new Element(4);
+$element_5 = new Element(5);
+$element_6 = new Element(6);
+$composite_1 = new Composite();
+$composite_2 = new Composite();
+$composite_1->add_component($element_1);
+$composite_1->add_component($element_2);
+$composite_1->add_component($element_3);
+$composite_1->add_component($element_4);
+$composite_1->add_component($element_5);
+$composite_2->add_component($element_6);
+$composite_1->add_component($composite_2);
+$composite_iterator = $composite_1->getIterator();
+foreach ($composite_1 as $element) {
+    print_r($element);
+}
