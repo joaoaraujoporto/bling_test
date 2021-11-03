@@ -1,0 +1,8 @@
+Ator 1..n participa
+Participa 1 Ator
+Filme 1..n participa
+Participa 1 Filme
+Filme 1..n dirige
+Dirige 1 Filme
+Diretor 1..n dirige
+Dirige 1 diretor

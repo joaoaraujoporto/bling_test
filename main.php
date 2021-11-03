@@ -6,6 +6,7 @@ require_once("./geo.php");
 require_once("./functions.php");
 require_once("./graph.php");
 require_once("./component.php");
+require_once("./Date.php");
 
 /**
  * Rotates a array to right based on a given offset.
@@ -108,7 +109,8 @@ function get_triangles($array) {
         }
     }
 
-    return $triangles;
+    $num_triangles = sizeof($triangles);
+    return ["num_triangles" => $num_triangles, "triangles" => $triangles];
 }
 
 function contains($string, $substring) {
