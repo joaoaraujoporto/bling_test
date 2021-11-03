@@ -13,7 +13,7 @@ class Point {
      * Create a point.
      * @param float $x Is the x coordinate of the point.
      * @param float $y Is the y coordinate of the point.
-     * @return Point The created Point.
+     * @return Point The created point.
      */
     public function __construct(float $x, float $y) {
         $this->x = $x;
@@ -32,7 +32,7 @@ class Rectangle {
      * Create a rectangle.
      * @param Point $bottom_left_point Is the point of the lower left corner of the rectangle.
      * @param Point $top_right_point Is the point of the upper right corner of the rectangle.
-     * @return Rectangle The created Rectangle.
+     * @return Rectangle The created rectangle.
      */
     public function __construct(Point $bottom_left_point, Point $top_right_point) {
         if (!Rectangle::validate_points_as_rectangle($bottom_left_point, $top_right_point)) {
@@ -47,7 +47,7 @@ class Rectangle {
      * Check if two points could be form a rectangle.
      * @param Point $bottom_left_point Is the point of the lower left corner of the rectangle.
      * @param Point $top_right_point Is the point of the upper right corner of the rectangle.
-     * @return boolean True if the points forms a rectangle and false otherwise.
+     * @return bool True if the points forms a rectangle and false otherwise.
      */
     public static function validate_points_as_rectangle(Point $bottom_left_point, Point $top_right_point) {
         $valid_width = $bottom_left_point->x < $top_right_point->x;

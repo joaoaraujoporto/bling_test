@@ -163,7 +163,7 @@ function get_triangles($array) {
  * Check if a gived string contains a gived substring.
  * @param string $string Is the string that could contains the substring.
  * @param string $substring Is the substring that could be contained in the string.
- * @return boolean True if the substring is contained and false otherwise.
+ * @return bool True if the substring is contained and false otherwise.
  */
 function contains($string, $substring) {
     $string = str_split($string);
