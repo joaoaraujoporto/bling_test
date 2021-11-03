@@ -2,10 +2,6 @@
 
 require_once("./quicksort.php");
 
-// void quicksort(int *A, int p, int r);
-// int partition(int *A, int p, int r);
-// void exchange(int *A, int i, int j);
-
 function quicksort_decrescent($A, $p = 0, $r = null) {
     if (is_null($r)) {
         $r = sizeof($A) - 1;
