@@ -54,6 +54,9 @@ class Element extends Component {
     }
 }
 
+/**
+ * This class provides a external iterator to the Composite class.
+ */
 class CompositeIterator implements Iterator {
     private $position;
     private $elements;
@@ -95,6 +98,9 @@ class CompositeIterator implements Iterator {
     }
 }
 
+/**
+ * This class provides a external iterator to the Element class.
+ */
 class ElementIterator implements Iterator {
     private $position;
     private $element;
