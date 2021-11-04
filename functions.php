@@ -1,5 +1,8 @@
 <?php
 
+require_once("./quicksort.php");
+// include_once("quicksort_decrescent.php");
+
 /**
  * Find the minimum value of an integer array.
  * @param array $array Is the array with integer values.
@@ -83,6 +86,7 @@ function extract_odds($array) {
 function sort_even_crescent_odd_decrescent($array) {
     $evens = extract_evens($array);
     $odds = extract_odds($array);
+    var_dump($evens);
     $sorted_evens = quicksort($evens);
     $sorted_odds = quicksort_decrescent($odds);
     $sorted_even_crescent_odd_decrescent = array_merge($sorted_evens, $sorted_odds);
