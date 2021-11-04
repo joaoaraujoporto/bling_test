@@ -44,13 +44,15 @@ O formato das entradas de cada algoritmo é detalhado a seguir.
 
 ##### Algoritmo 1
 
-**<valor_1>**,**<valor_2>**,**<valor_3>**,...,**<valor_n>** **<numero_posicoes_rotacao>**
+**<valor_1>**,**<valor_2>**,**<valor_3>**,...,**<valor_n>** **<numero_posicoes_rotacao>** **<direcao>**
 
 Onde
 
 **<valor_i>** pode ser qualquer string representando um elemento de um array
 
 **<numero_posicoes_rotacao>** deve ser um inteiro representando o número de posições a rotacionar
+
+**<direcao>** deve ser um inteiro representando a direção, 0 rotaciona à direira e 1 rotaciona à esquerda
 
 Exemplo de entrada para o algoritmo 1
 

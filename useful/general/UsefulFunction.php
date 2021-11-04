@@ -53,6 +53,39 @@ class UsefulFunction {
     }
 
     /**
+     * Rotate a array to left based on a given offset.
+     * @param array $array to be rotated.
+     * @param int $offset to rotate array.
+     * @return array the array rotated.
+     */
+    public static function rotate_to_left($array, $offset) {
+        $array_rotated = [];
+        $array_size = sizeof($array);
+
+        foreach ($array as $key => $value) {
+            $key_rotated = ($key + ($array_size - $offset)) % $array_size;
+            $array_rotated[$key_rotated] = $value;
+        }
+
+        return $array_rotated;
+    }
+
+    /**
+     * Rotate a array to left or to right based on a given offset.
+     * @param array $array to be rotated.
+     * @param int $offset to rotate array.
+     * @param int $direction to rotate. 0 is right and 1 is left. Default 0.
+     * @return array the array rotated.
+     */
+    public static function rotate($array, $offset, $direction = 0) {
+        if ($direction) {
+            return UsefulFunction::rotate_to_left($array, $offset);
+        }
+
+        return UsefulFunction::rotate_to_right($array, $offset);
+    }
+
+    /**
      * Extract the even values of a gived integer array.
      * @param array $array Is the array with integer values.
      * @return array An array containing the even values from the gived array.
