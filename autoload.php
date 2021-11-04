@@ -1,5 +1,6 @@
 <?php
 
-spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
+spl_autoload_register(function ($classname) {
+    $classname = dirname(__FILE__)."/".str_replace("\\", "/", $classname).".php";
+    require_once($classname);
 });

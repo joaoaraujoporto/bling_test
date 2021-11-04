@@ -1,6 +1,8 @@
 <?php
 
-require_once("./autoload.php");
+namespace useful\general;
+
+use useful\sort\Quicksort;
 
 class UsefulFunction {
     public static function exchange($A, $i, $j) {

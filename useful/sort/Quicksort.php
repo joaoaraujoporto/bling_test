@@ -1,6 +1,8 @@
 <?php
 
-require_once("./autoload.php");
+namespace useful\sort;
+
+use useful\general\UsefulFunction;
 
 /**
  * This class provides sorting based on the quicksort algorithm.
