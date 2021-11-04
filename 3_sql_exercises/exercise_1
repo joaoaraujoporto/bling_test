@@ -1,0 +1,8 @@
+Um registro de Ator pode ser associado com um ou mais registro de Participa
+Um registro de Participa pode ser associado com um registro de Ator
+Um registro de Filme pode ser associado com um ou mais registro de Participa
+Um registro de Participa pode ser associado com um registro de Filme
+Um registro de Filme pode ser associado com um ou mais registro de Dirige
+Um registro de Dirige pode ser associado com um registro de Filme
+Um registro de Diretor pode ser associado com um ou mais registro de Dirige
+Um registro de Dirige pode ser associado com um registro de Diretor
