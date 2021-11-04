@@ -1,5 +1,9 @@
 <?php
 
+namespace geometric;
+
+use useful\general\UsefulFunction;
+
 /**
  * This class provides a geometric rectangle.
  */

@@ -1,5 +1,7 @@
 <?php
 
+namespace graph;
+
 /**
  * This class provides a vertice to be used with a Graph.
  */

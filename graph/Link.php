@@ -1,5 +1,7 @@
 <?php
 
+namespace graph;
+
 class Link {
     public $id;
     public $vertice_1;

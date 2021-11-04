@@ -1,5 +1,7 @@
 <?php
 
+namespace useful\date;
+
 /**
  * This class provides useful constants and methods for dealing with dates.
  */

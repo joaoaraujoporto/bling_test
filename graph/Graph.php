@@ -1,5 +1,7 @@
 <?php
 
+namespace graph;
+
 /**
  * This class provides a graph to be used as a data structure and useful methods to this kind
  * of data structure.

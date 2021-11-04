@@ -1,5 +1,7 @@
 <?php
 
+namespace geometric;
+
 /**
  * This class provides a geometric point.
  */
