@@ -2,6 +2,28 @@
 
 Cerca de 30 horas foram utilizadas para criar a solução.
 
+## Sumário
+1. [Configuração do ambiente de execução](#configuracao-do-ambiente-de-execucao)
+1. [Algoritmos e lógica](#algoritmos-e-logica)
+2. [Programação orientada à objetos e design patterns](#programaca-orientada-a-objetos-e-design-patterns)
+3. [SQL e modelo relacional](#sql-e-modelo-relacional)
+
+## Configuração do ambiente de execução
+
+Para executar os arquivos php presentes neste repositório utilizando um container Docker basta ter o docker-compose instalado e executar, a partir da pasta raiz do repositório, o seguinte comando:
+
+    $ docker-compose up -d
+
+Com isso o container será criado e sua linha de comando pode ser acessada com o comando:
+
+    $ docker exec -it <container_id_app> bash
+
+O comando docker-compose também criará um container com um servidor MySQL que pode ser acessado via linha de comando de forma semelhante:
+
+    $ docker exec -it <container_id_db> bash
+
+
+
 ## Algoritmos e lógica
 
 Cada um dos algoritmos pedidos pode ter sua implementação testada a partir de um dos arquivos da pasta `1_algorithm_logic_exercises`.
@@ -146,7 +168,7 @@ Uma demonstração da implementação do padrão iterator no modelo dado pode se
 
 O diagrama de classes do modelo seguindo o padrão iterator está no arquivo `component_class_diagram.png`.
 
-## SQL - modelo relacional
+## SQL e modelo relacional
 
 As soluções para os problemas de SQL estão presentes nos arquivos da pasta `3_sql_exercises`.
 
