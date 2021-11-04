@@ -44,7 +44,7 @@ O formato das entradas de cada algoritmo é detalhado a seguir.
 
 ##### Algoritmo 1
 
-**<valor_1>**,**<valor_2>**,**<valor_3>**,...,**<valor_n>** **<numero_posicoes_rotacao>** **<direcao>**
+**<valor_1>**,**<valor_2>**,**<valor_3>**,...,**<valor_n>** **<numero_posicoes_rotacao>** **<_direcao>**
 
 Onde
 
@@ -52,11 +52,11 @@ Onde
 
 **<numero_posicoes_rotacao>** deve ser um inteiro representando o número de posições a rotacionar
 
-**<direcao>** deve ser um inteiro representando a direção, 0 rotaciona à direira e 1 rotaciona à esquerda
+**<_direcao>** deve ser um inteiro representando a direção, 0 rotaciona à direira e 1 rotaciona à esquerda
 
 Exemplo de entrada para o algoritmo 1
 
-    $ php exercise_1.php 1,2,3,4,5,6 2
+    $ php exercise_1.php 1,2,3,4,5,6 2 0
 
 ##### Algoritmo 2
 
