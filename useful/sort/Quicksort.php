@@ -12,8 +12,6 @@ class Quicksort {
      * Essa implementação de quicksort foi baseada em uma implementação de quicksort em C que fiz
      * em uma das disciplinas da graduação.
      */
-
-
     public static function sort($A, $p = 0, $r = null) {
         if (is_null($r)) {
             $r = sizeof($A) - 1;
