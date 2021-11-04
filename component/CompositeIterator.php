@@ -1,9 +1,11 @@
 <?php
 
+namespace component;
+
 /**
  * This class provides a external iterator to the Composite class.
  */
-class CompositeIterator implements Iterator {
+class CompositeIterator implements \Iterator {
     private $position;
     private $elements;
 

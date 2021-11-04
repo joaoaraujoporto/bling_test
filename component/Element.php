@@ -1,5 +1,7 @@
 <?php
 
+namespace component;
+
 /**
  * This class provides a element.
  */
@@ -15,7 +17,7 @@ class Element extends Component {
         $this->value = $value;
     }
 
-    public function getIterator(): Iterator {
+    public function getIterator(): \Iterator {
         return new ElementIterator($this);
     }
 }

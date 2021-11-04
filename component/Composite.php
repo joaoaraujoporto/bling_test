@@ -1,5 +1,7 @@
 <?php
 
+namespace component;
+
 /**
  * This class provides a composite.
  */
@@ -22,7 +24,7 @@ class Composite extends Component {
         $this->components[] = $component;
     }
     
-    public function getIterator(): Iterator {
+    public function getIterator(): \Iterator {
         return new CompositeIterator($this);
     }
 }

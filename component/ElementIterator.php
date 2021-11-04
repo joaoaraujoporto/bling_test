@@ -1,9 +1,11 @@
 <?php
 
+namespace component;
+
 /**
  * This class provides a external iterator to the Element class.
  */
-class ElementIterator implements Iterator {
+class ElementIterator implements \Iterator {
     private $position;
     private $element;
 
