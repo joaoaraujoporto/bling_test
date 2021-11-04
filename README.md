@@ -10,11 +10,11 @@ O algoritmo 1 pode ser testado a partir do arquivo `exercise_1.php`, o algoritmo
 
 Para testar a implementação de um algoritmo basta executar no shell um comando no seguinte formato
 
-> $ php exercise_<numero_algoritmo>.php <entrada_para_algoritmo>*
+    $ php exercise_<numero_algoritmo>.php <entrada_para_algoritmo>*
 
 Por exemplo
 
-> $ php exercise_2.php 1,2,3,4,5
+    $ php exercise_2.php 1,2,3,4,5
 
 #### Formato de entrada dos algoritmos
 
@@ -27,11 +27,12 @@ O formato das entradas de cada algoritmo é detalhado a seguir.
 Onde
 
 **<valor_i>** pode ser qualquer string representando um elemento de um array
+
 **<numero_posicoes_rotacao>** deve ser um inteiro representando o número de posições a rotacionar
 
 Exemplo de entrada para o algoritmo 1
 
-> $ php exercise_1.php 1,2,3,4,5,6 2
+    $ php exercise_1.php 1,2,3,4,5,6 2
 
 ##### Algoritmo 2
 
@@ -43,7 +44,7 @@ Onde
 
 Exemplo de entrada para o algoritmo 2
 
-> $ php exercise_2.php 1,2,3,4,5,6
+    $ php exercise_2.php 1,2,3,4,5,6
 
 ##### Algoritmo 3
 
@@ -52,15 +53,20 @@ Exemplo de entrada para o algoritmo 2
 Onde
 
 **<dd_1>** deve ser um inteiro representando o dia da data inicial
+
 **<mm_1>** deve ser um inteiro representando o mês da data inicial
+
 **<yyyy_1>** deve ser um inteiro representando o ano da data inicial
+
 **<dd_2>** deve ser um inteiro representando o dia da data final
+
 **<mm_2>** deve ser um inteiro representando o mês da data final
+
 **<yyyy_2>** deve ser um inteiro representando o ano da data final
 
 Exemplo de entrada para o algoritmo 3
 
-> $ php exercise_3.php 03/04/1998 04/11/2021
+    $ php exercise_3.php 03/04/1998 04/11/2021
 
 ##### Algoritmo 4
 
@@ -72,7 +78,7 @@ Onde
 
 Exemplo de entrada para o algoritmo 4
 
-> $ php exercise_4.php 1,2,3,4,5,6
+    $ php exercise_4.php 1,2,3,4,5,6
 
 ##### Algoritmo 5
 
@@ -81,11 +87,12 @@ Exemplo de entrada para o algoritmo 4
 Onde
 
 **<string>** deve ser uma string representando um texto
+
 **<substring>** deve ser uma string representando um subtexto
 
 Exemplo de entrada para o algoritmo 5
 
-> $ php exercise_5.php amarelo amar
+    $ php exercise_5.php amarelo amar
 
 ##### Algoritmo 6
 
@@ -94,17 +101,24 @@ Exemplo de entrada para o algoritmo 5
 Onde
 
 **<ret_1_x_inf_esq>** deve ser um inteiro representando a coordenada x do ponto inferior esquerdo do primeiro retângulo
+
 **<ret_1_y_inf_esq>** deve ser um inteiro representando a coordenada y do ponto inferior esquerdo do primeiro retângulo
+
 **<ret_1_x__sup_dir>** deve ser um inteiro representando a coordenada x do ponto superior direito primeiro retângulo
+
 **<ret_1_y_sup_dir>** deve ser um inteiro representando a coordenada y do ponto superior direito primeiro retângulo
+
 **<ret_2_x_inf_esq>** deve ser um inteiro representando a coordenada x do ponto inferior esquerdo do segundo retângulo
+
 **<ret_2_y_inf_esq>** deve ser um inteiro representando a coordenada y do ponto inferior esquerdo do segundo retângulo
+
 **<ret_2_x__sup_dir>** deve ser um inteiro representando a coordenada x do ponto superior direito segundo retângulo
+
 **<ret_2_y_sup_dir>** deve ser um inteiro representando a coordenada y do ponto superior direito segundo retângulo
 
 Exemplo de entrada para o algoritmo 6
 
->$ php exercise_6.php 1,1/3,3 2,1/4,4
+    $ php exercise_6.php 1,1/3,3 2,1/4,4
 
 ##### Algoritmo 7
 
@@ -113,19 +127,22 @@ Exemplo de entrada para o algoritmo 6
 Onde
 
 **<ponto_i>** deve ser uma string representando um ponto no mapa
+
 **<link_i>** deve estar no formato **<ponto_i>**,**<ponto_j>** representando uma conexão entre dois pontos no mapa
+
 **<ponto_partida>** deve ser uma string representando o ponto de partida do caminho no mapa
+
 **<ponto_partida>** deve ser uma string representando o ponto final do caminho no mapa
 
 Exemplo de entrada para o algoritmo 7
 
-> $ php exercise_7.php a,b,c,d,e,f,g,h a,b/a,e/a,h/b,c/b,d/c,d/c,e/d,g/e,f/g,h a,c
+    $ php exercise_7.php a,b,c,d,e,f,g,h a,b/a,e/a,h/b,c/b,d/c,d/c,e/d,g/e,f/g,h a,c
 
 ## Programação orientada à objetos e design patterns
 
 Uma demonstração da implementação do padrão iterator no modelo dado pode ser obtida executando-se, a partir da pasta `2_oop_and_designpattern_exercises`, o seguinte comando:
 
-> $ php exercise_1.php
+    $ php exercise_1.php
 
 O diagrama de classes do modelo seguindo o padrão iterator está no arquivo `component_class_diagram.png`.
 
