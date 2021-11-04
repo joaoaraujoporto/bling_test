@@ -3,9 +3,9 @@
 Cerca de 30 horas foram utilizadas para criar a solução.
 
 ## Sumário
-1. [Configuração do ambiente de execução](#configuracao-do-ambiente-de-execucao)
-1. [Algoritmos e lógica](#algoritmos-e-logica)
-2. [Programação orientada à objetos e design patterns](#programaca-orientada-a-objetos-e-design-patterns)
+1. [Configuração do ambiente de execução](#configuração-do-ambiente-de-execução)
+1. [Algoritmos e lógica](#algoritmos-e-lógica)
+2. [Programação orientada à objetos e design patterns](#programação-orientada-à-objetos-e-design-patterns)
 3. [SQL e modelo relacional](#sql-e-modelo-relacional)
 
 ## Configuração do ambiente de execução
@@ -104,13 +104,13 @@ Exemplo de entrada para o algoritmo 4
 
 ##### Algoritmo 5
 
-**<string>** **<substring>**
+**<_string>** **<_substring>**
 
 Onde
 
-**<string>** deve ser uma string representando um texto
+**<_string>** deve ser uma string representando um texto
 
-**<substring>** deve ser uma string representando um subtexto
+**<_substring>** deve ser uma string representando um subtexto
 
 Exemplo de entrada para o algoritmo 5
 
